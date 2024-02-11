@@ -38,3 +38,4 @@ Host github.com-t
 	User git
 	IdentityFile /c/Users/DELL/Downloads/sriram
 	    
+To change the url from https to ssh we use git remote set-url hhtps:git@github.com:sriram-git-6/shell-script.git        
