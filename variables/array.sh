@@ -4,4 +4,4 @@ persons=("rohit" "kohli" "sachin") # this is called as an array to hold multiple
 
 echo "first person is: ${persons[0]}"
 
-echo "all persons in the array are: ${[@]}"
+echo "all persons in the array are: ${persons[@]}"
