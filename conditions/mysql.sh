@@ -20,6 +20,34 @@ exit 1
 
 fi
 
+yum install mysql -y
 
+if [ $? ne 0]
+
+then 
+
+echo "Installation of mysql is error"
+
+exit 1
+
+else 
+
+echo "Installation of mysql is success"
+
+fi
+
+yum install postfix -y
+
+if [ $? ne 0 ]
+
+then
+
+echo "installation of postfix has got some error"
+
+exit 1
+
+else
+
+echo "installation of postfix is success"
 
 
