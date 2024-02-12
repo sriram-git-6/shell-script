@@ -50,4 +50,6 @@ else
 
 echo "installation of postfix is success"
 
+fi
+
 
