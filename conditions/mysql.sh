@@ -22,7 +22,7 @@ fi
 
 yum install mysql -y
 
-if [ $? -ne 0 ]
+if [ $? -ne 0 ]    # checking exist status of previous command is 0 or not.
 
 then 
 
