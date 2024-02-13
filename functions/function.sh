@@ -18,13 +18,13 @@ if [ $? -ne 0 ]    # checking exist status of previous command is 0 or not.
 
 then 
 
-echo "$2 is $R failure $N"
+echo -e "$2 is $R failure $N"
 
 exit 1
 
 else 
 
-echo "$2 is $R success $N"
+echo -e "$2 is $R success $N"
 
 fi
 
