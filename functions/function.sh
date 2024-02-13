@@ -1,14 +1,14 @@
 #!/bin/bash
 
-# This script is for installing mysql.
+# This script is for installing mysql and postfix
 
-# "id -u" command is used checking the user, after execiting this command if it returns 0 value then it is the root user.
+Date=$(date +%F:%H:%M:%S)
+script_name=$0
+LOGFILE=/tmp/$script_name-$Date.log
 
-USERID=$(id -u)
 
 # this function should validate previous command and inform it is success or failure.
 validate(){
-   # $1 ---> it will receive the argument
 
 if [ $? -ne 0 ]    # checking exist status of previous command is 0 or not.
 
@@ -26,6 +26,9 @@ fi
 
 }
 
+# "id -u" command is used checking the user, after executing this command if it returns 0 value then it is the root user.
+USERID=$(id -u)
+
 if [ $USERID -ne 0 ]
 
 then
@@ -40,11 +43,11 @@ exit 1
 
 fi
 
-yum install mysql -y
+yum install mysql -y &>>$LOGFILE
 
 validate $? "Installing mysql"
 
-yum install postfix -y
+yum install postfix -y &>>$LOGFILE
 
 validate $? "Installing postfix"
 
