@@ -16,7 +16,7 @@ Y="\e[33m"
 
 # check whether the user has root access or not.
 
-if [ USERID -ne 0 ];
+if [ $USERID -ne 0 ];
 then
     echo -e "$R Error: Please run the script with root access $N"
     exit 1
