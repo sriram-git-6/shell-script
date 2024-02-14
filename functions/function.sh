@@ -14,7 +14,7 @@ N="\e[0m"
 # this function should validate previous command and inform it is success or failure.
 validate(){
 
-if [ $? -ne 0 ]    # checking exist status of previous command is 0 or not.
+if [ $1 -ne 0 ]    # checking exist status of previous command is 0 or not.
 
 then 
 
