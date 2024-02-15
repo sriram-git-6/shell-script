@@ -18,7 +18,7 @@ LOGSDIR=/home/centos/shellscript-logs
 script_name=$0
 LOGFILE=$LOGSDIR/$script_name-$Date.log
 
-FILES_TO_DELETE=$(find app-logs -name "*.log" -type f -mtime +14)
+FILES_TO_DELETE=$(find $APP_LOGS_DIR -name "*.log" -type f -mtime +14)
 
 echo "$FILES_TO_DELETE"
 
